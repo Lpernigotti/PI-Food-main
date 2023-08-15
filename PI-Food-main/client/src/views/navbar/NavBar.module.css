@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Rosalia";
+    src: url("../../fonts//Rosalia.otf");
+}
+.navBar {
+    background-color: rgba(207, 88, 20, 0.916);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+  }
+
+  .navLink {
+    font-family: "Rosalia", sans-serif;
+    border: 3px solid rgb(6, 76, 6);
+    border-radius: 10px;
+    padding: 10px 5px;
+    color: rgb(255, 245, 172);
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    margin-right: 40px;
+    
+  }
+  .navLink:hover{
+    background-color: rgb(110, 110, 20);
+    transform: scale(1.05);
+  }
+  .navLink:active{
+    transform: scale(0.95);
+    animation: explode 0.5s forwards;
+  }
+  @keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+  }
+
+  .navButton {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  .navTitle {
+    font-family: "Rosalia", sans-serif;
+    color: rgb(255, 245, 172);
+    margin: 0;
+    font-size: 40%;
+  }
+  
+  .divNL{
+    display: flex;
+    gap: 10px;
+  }

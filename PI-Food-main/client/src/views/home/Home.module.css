@@ -1,0 +1,14 @@
+
+.homeTitle{
+    margin-top: 75px;
+    margin-bottom: 50px;
+    font-size: 76px;
+    color: rgb(99, 5, 5);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
