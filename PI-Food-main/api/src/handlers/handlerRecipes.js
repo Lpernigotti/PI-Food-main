@@ -29,7 +29,7 @@ const handlerAllInfo = async(req,res) => {
     if(title){
         try {
          let recipeFiltered = await allInfo.filter((rec) => rec.title.toLowerCase().includes(title.toLowerCase())
-         ); // para filtrar sin importar mayusc o minusc
+         ); 
 
          recipeFiltered.length
          ? res.status(200).json(recipeFiltered)
@@ -39,19 +39,19 @@ const handlerAllInfo = async(req,res) => {
             res.status(500).send("Algo salio mal en el handler de AllInfo ")
         }
     }else{
-        res.status(200).send(allInfo) // si no buscan por titulo se devuelve todo 
+        res.status(200).send(allInfo)  
     };
 }
 
 const handlerRecipeById = async (req,res) => {
     const { idRecipe } = req.params;
-   //const idType = determineIDType(idRecipe);
+   
     try {
 
         if( !validateUuid(idRecipe)){
 
             let recipeApi = await getApiById(idRecipe);
-            console.log("Holis")
+            console.log("Recetas de la api")
             let recipeInfo = {
                 image: recipeApi.image,
                 title: recipeApi.title,

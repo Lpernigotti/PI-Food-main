@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Rosalia";
+    src: url("../../fonts/Rosalia.otf");
+}
+
+.createContainer {
+    background-image: url("../../images/iStock-1310044335.jpg");
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.createFormTitle {
+    font-family: "Rosalia", sans-serif;
+    color: rgba(207, 88, 20, 0.916);
+    text-shadow: 3px 3px 0px rgba(255, 178, 25, 0.269);
+    font-size: 28px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 245, 172, 0.902);
+    border-radius: 20px;
+    width: 20%;
+    height: fit-content;
+    align-self: center;
+   
+    
+  }
+  
+  @font-face {
+    font-family: "Oswald";
+    src: url("../../fonts/Oswald-VariableFont_wght.ttf");
+  }
+  .createH4 {
+    font-family: "Oswald", sans-serif ;
+    color: rgba(207, 88, 20, 0.916) ;
+    text-shadow: 3px 3px 0px rgba(255, 178, 25, 0.269);
+    font-size: 18px;
+    margin-top: 5px;
+    background-color:rgba(255, 245, 172, 0.902) ;
+    border-radius: 20px;
+    width: 35%;
+    height: fit-content;
+  }

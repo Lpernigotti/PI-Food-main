@@ -6,8 +6,9 @@ function NavBar () {
         <nav className={style.navBar}>
             <h2 className={style.navTitle}>Yummy</h2>
             <div>
-                <p>contact us: 2355432376</p>
+                <h3 className={style.slogan}>You don't need to eat less, you need to eat well</h3>
             </div>
+        
             
             <div className={style.divNL}>
             <button className={style.navButton}>

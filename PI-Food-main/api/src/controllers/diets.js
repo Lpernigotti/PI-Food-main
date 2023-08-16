@@ -8,7 +8,7 @@ const getDiets = async() => {
     if(!dietDB){
       const dietApi = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&number=100&addRecipeInformation=true`)
       const diet = dietApi.data.results.flatMap((e)=> e.diets);
-      const arr = new Set(diet, " "); // se eliminan los duplicados
+      const arr = new Set(diet); // se eliminan los duplicados
       const dietas = [...arr,"vegetarian"];
       dietas.forEach((el) => {
         Diets.findOrCreate({

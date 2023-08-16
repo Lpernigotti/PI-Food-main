@@ -11,32 +11,143 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
+    padding-top: 10px;
 }
  
 .welcome {
-    font-family: "BebasNeue", sans-serif;
+    font-family: "Rosalia", sans-serif;
     font-size: 3rem;
     color: rgb(255, 245, 172) ;
   text-align: center; 
   padding: 0.5rem;
   margin-top: 2px;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.269);
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 .title {
     font-family: "Rosalia", sans-serif;
-    font-size: xx-large;
+    font-size: 65px;
     text-align: center;
     color: rgb(255, 245, 172) ;
     text-shadow: 3px 3px 0px rgba(255, 178, 25, 0.269);
+    position: relative;
+    z-index: 2;
 }
 @font-face {
     font-family: 'Oswald' ;
     src: url("../../fonts/Oswald-VariableFont_wght.ttf");
 }
 .p {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Rosalia', sans-serif;
     color: rgb(255, 245, 172) ;
     text-align: center;
 }
+.p2 {
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    color: rgb(6, 76, 6);
+}
+
+  .circleSectionLeft {
+    position: absolute;
+    top: 35%; /* Centra verticalmente en la mitad superior */
+    left: 5%; /* Alinea a la izquierda */
+    transform: translate(0, -50%); /* Ajusta la posición vertical */
+    background-color: rgb(255, 245, 172); /* Color manteca */
+    padding: 20px;
+    border-radius: 70%; /* Crea el círculo */
+    width: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .circleSectionRight {
+    position: absolute;
+    bottom: 0%; /* Centra verticalmente en la mitad superior */
+    right: 5%; /* Alinea a la derecha */
+    transform: translate(0, -50%); /* Ajusta la posición vertical */
+    background-color: rgb(255, 245, 172); /* Color manteca */
+    padding: 20px;
+    border-radius: 70%; /* Crea el círculo */
+    width: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .titleSection {
+    font-family: "Rosalia", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(6, 76, 6) ;
+    text-shadow: 3px 3px 0px rgba(255, 178, 25, 0.269);
+}
+.navLink {
+    font-family: "Rosalia", sans-serif;
+    border: 3px solid rgb(6, 76, 6);
+    width: 70%;
+    height: 70%;
+    padding: 10px 20px;
+    color: rgb(64, 100, 47);
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    position: relative;
+    background-color: rgb(255, 245, 172);
+    margin-top: 40px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    
+  }
+  .navLink:hover{
+    background-color: rgb(110, 110, 20);
+    transform: scale(1.05);
+  }
+  .navLink:active{
+    transform: scale(0.95);
+    animation: explode 0.5s forwards;
+  }
+  @keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+  }
+
+  .Button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  .divButton {
+    margin-bottom: 200px;
+  }
+  .image {
+    border-radius: 70%;
+    width: 250px; 
+    
+  }
+  .footer {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 245, 172) ;
+    text-align: center; /* Alinea el texto al centro */
+  margin-top: auto; /* Aprovecha el espacio disponible en la parte inferior */
+  padding: 10px 0;
+  }

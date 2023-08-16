@@ -12,8 +12,7 @@
 
   .navLink {
     font-family: "Rosalia", sans-serif;
-    border: 3px solid rgb(6, 76, 6);
-    border-radius: 10px;
+    font-size: medium;
     padding: 10px 5px;
     color: rgb(255, 245, 172);
     text-decoration: none;
@@ -26,6 +25,7 @@
   }
   .navLink:hover{
     background-color: rgb(110, 110, 20);
+    border-radius: 10px;
     transform: scale(1.05);
   }
   .navLink:active{
@@ -55,10 +55,15 @@
     font-family: "Rosalia", sans-serif;
     color: rgb(255, 245, 172);
     margin: 0;
-    font-size: 40%;
+    font-size:300%;
   }
   
   .divNL{
     display: flex;
     gap: 10px;
+  }
+  .slogan{
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 245, 172) ;
+    
   }

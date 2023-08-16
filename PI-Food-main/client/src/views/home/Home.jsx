@@ -74,9 +74,11 @@ useEffect(() => {
 
 return (
       <div className={style.home}>
-        <h1 className={style.homeTitle}>Home</h1>
-        <div>
-          <select onChange={handlerFilter} >
+        <h1 className={style.homeTitle}>Find your Recipe!</h1>
+        <SearchBar handleChange={handleChange} handleSubmit={handleSubmit}/>
+        <div className={style.filtersContainer}>
+          <div className={style.filters}>
+            <select onChange={handlerFilter} >
             <option value="default">Filter By Diets</option>
             <option value="vegetarian" >vegetarian</option>
             <option value="lacto ovo vegetarian">lacto ovo vegetarian</option>
@@ -90,28 +92,31 @@ return (
             <option value="pescatarian">pescatarian</option>
             <option value="fodmap friendly">fodmap friendly</option>
             <option value="AllRecipes">All Recipes</option>
-          </select>
-          <select name="Filter Recipes" onChange={handleOrigin}>
+            </select>
+          
+            <select name="Filter Recipes" onChange={handleOrigin}>
             <option value="default">Filter Recipes</option>
             <option value="all">All Recipes</option>
             <option value="created">Created</option>
             <option value="existing">Existing</option>
-          </select>
+            </select>
+          </div>
 
-          <select onChange={handleOrder}>
+          <div className={style.sorting}>
+            <select onChange={handleOrder}>
             <option value="default">Order...</option>
             <option value="orderAZ"> A-Z</option>
             <option value="orderZA"> Z-A</option>
-          </select>
+            </select>
 
-          <select onChange={handleOrderHealthScore}>
+            <select onChange={handleOrderHealthScore}>
             <option value="default">Order by Healthscore</option>
             <option value="Ascendente">Asc</option>
             <option value="Descendente">Desc</option>
-          </select>
+            </select>
+          </div>
         </div>
         
-        <SearchBar handleChange={handleChange} handleSubmit={handleSubmit}/>
         <Cards allRecipes={currentRecipes}/>
         <br />
         <div>

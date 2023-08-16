@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "Rosalia";
+    src: url("../../fonts/Rosalia.otf");
+
+}
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.titleSection {
+  background-color: black;
+  border-radius: 10px 10px 0 0;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+.titImgSumSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.title {
+  font-family: "Rosalia", sans-serif;
+  color: white;
+  font-size: 24px;
+}
+.imageSection {
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.recipeImage {
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  
+}
+.infoSection {
+  display: flex;
+  justify-content: space-between;
+}
+.healthScore {
+  background-color: rgba(207, 88, 20, 0.916);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.healthScore:hover {
+  transform: scale(1.05);
+  background-color:rgba(207, 88, 20, 0.916);
+}
+
+.healthScoreHover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.healthScoreTitle {
+  font-family: "Rosalia", sans-serif;
+  color: rgba(255, 227, 172, 0.824);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.healthScoreValue {
+  display: none;
+}
+
+.healthScore:hover .healthScoreValue {
+  display: block;
+}
+
+.diets {
+  flex-grow: 1;
+}
+
+.dietsTitle {
+  font-family: "Rosalia", sans-serif;
+  color: rgba(255, 227, 172, 0.824);
+  background-color: rgba(207, 88, 20, 0.916);
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+
+.dietList {
+  list-style: none;
+  padding: 0;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../../fonts/Oswald-VariableFont_wght.ttf");
+}
+.dietItem {
+    font-family: "Oswald", sans-serif;
+    color:rgba(255, 227, 172, 0.824) ;
+    background-color: rgba(207, 88, 20, 0.916);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+  }
+
+  .summarySection {
+    width: 25%;
+    height: 70%;
+    margin-top: none;
+    margin-bottom: 20px;
+    margin-left: 1000px;
+  }
+  
+  .summaryTitle {
+    font-size: 18px;
+  }
+  
+  .summaryText {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .contentSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .stepsSection {
+    width: 50%;
+    margin-top: 20px; 
+    margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo de la caja */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+  
+  
+  .stepsTitle {
+    font-family: "Rosalia", sans-serif;
+    color: rgba(255, 227, 172, 0.824);
+    background-color: rgba(207, 88, 20, 0.916);
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+  }
+  .stepsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .stepItem {
+    font-family: "Oswald", sans-serif;
+    color: rgba(255, 227, 172, 0.824);
+    background-color: rgba(207, 88, 20, 0.916);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+  }
+  

@@ -2,15 +2,61 @@
 .cardContainer{
   display: flex;
   flex-direction: column;
-  background-color: rgba(251, 238, 222, 0.856);
-  border: 2px solid rgb(59, 0, 0); 
+  background-color: rgba(255, 233, 188, 0.824);
+  border: 3px solid rgba(207, 88, 20, 0.916); 
   border-radius: 5px;
   padding: 25px ;
+  margin: 10px;
   cursor: pointer;
   backface-visibility: hidden;
   transform: translateZ(0);
-  transition: transfomr 0.25s ease-out;
+  box-sizing: border-box;
+
 }
-.cardContainer:hover {
-    transform: scale(1.05);
+
+.cardImg {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.cardImg:hover{
+  transform: scale(1.1);
+}
+@font-face {
+  font-family: "Rosalia";
+  src: url("../../fonts/Rosalia.otf");
+}
+.cardH2 {
+  font-family: "Rosalia", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #8b5f30;
+  text-decoration: none;
+  outline: none;
+  backface-visibility: hidden; /* Quitar el subrayado del enlace */
+}
+.dietList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio entre las dietas */
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../../fonts/Oswald-VariableFont_wght.ttf");
+}
+
+.diet {
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  background-color: rgba(6, 76, 6, 0.82);
+  color: rgb(255, 233, 188);
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.dieth3 {
+  font-family: "Rosalia", sans-serif;
+  color: #8b5f30 ;
+  font-size: 20px;
+  align-self: center;
+  margin-top: 1px;
 }

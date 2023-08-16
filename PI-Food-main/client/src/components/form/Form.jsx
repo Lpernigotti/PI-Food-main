@@ -2,6 +2,7 @@ import validate from "../validators";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector} from "react-redux";
 import { createRecipe, getDiets } from "../../redux/actions";
+import style from "../form/Form.module.css";
 
 function Form () {
    const dispatch = useDispatch();
@@ -70,41 +71,64 @@ function Form () {
     const isValid = Object.values(errors).every((error) => !error)
 
     return (
-     <div>
-        <form onSubmit={handleSubmit}>
-            <div>
-             <label >Title</label>
-             <input name="title" value={input.title} onChange={  handleChange} />
+     <div className={style.createFormContainer}>
+        <form onSubmit={handleSubmit} className={style.createForm}>
+            <div className={style.inputDiv}>
+             <label className={style.inputLabel}>Title</label>
+             <input 
+             name="title" 
+             value={input.title} 
+             onChange={  handleChange} 
+             className={style.inputField}/>
              {errors.title && <p>{errors.title} </p>}
             </div>
 
-            <div>
-             <label >Summary</label>
-             <input name="summary" value={input.summary} onChange={ handleChange}/>
+            <div className={style.inputDiv}>
+             <label className={style.inputLabel}>Summary</label>
+             <input
+              name="summary" 
+              value={input.summary} 
+              onChange={ handleChange}
+              className={style.inputField}/>
              { errors.summary &&<p>{errors.summary} </p>}
             </div>
 
-            <div>
-             <label >healthScore</label>
-             <input name="healthScore" value={input.healthScore} onChange={ handleChange}/>
+            <div className={style.inputDiv}>
+             <label className={style.inputLabel} >healthScore</label>
+             <input 
+             name="healthScore" 
+             value={input.healthScore} 
+             onChange={ handleChange}
+             className={style.inputField}/>
              {errors.healthScore && <p>{errors.healthScore} </p>}
             </div>
 
-            <div>
-             <label >Steps</label>
-             <input name="steps" value={input.steps} onChange={handleChange}/>
+            <div className={style.inputDiv}>
+             <label className={style.inputLabel} >Steps</label>
+             <input 
+             name="steps" 
+             value={input.steps}
+              onChange={handleChange}
+              className={style.inputField}/>
              { errors.steps && <p>{errors.steps}</p>}
             </div>
 
-            <div>
-             <label >Image</label>
-             <input name="image" value={input.image} onChange={handleChange} />
+            <div className={style.inputDiv}>
+             <label className={style.inputLabel} >Image</label>
+             <input 
+             name="image" 
+             value={input.image} 
+             onChange={handleChange} 
+             className={style.inputField}/>
              { errors.image && <p>{errors.image}</p>}
             </div>
 
-            <div>
-             <label >Diets:</label>
-             <select onChange={ handleChangeDiets} defaultValue="default" >
+            <div className={style.inputDiv}>
+             <label className={style.inputLabel}>Diets:</label>
+             <select 
+             onChange={ handleChangeDiets} 
+             defaultValue="default" 
+             className={`${style.inputField} ${style.selectField}`}>
                 <option default></option>
                 {diets?.map((d) => {
                     return (
@@ -116,7 +140,7 @@ function Form () {
             </div>
             <br />
             <div>
-                <button type="submit" disabled={!isValid}>Create</button>
+                <button type="submit" disabled={!isValid} className={style.submitButton}>Create</button>
             </div>
         </form>
      </div>

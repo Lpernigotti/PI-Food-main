@@ -7,14 +7,23 @@ function Card ({recipe}) {
   const {title, image, diets,id} = recipe
   return (
       <div className={style.cardContainer}>
-        <img alt="imagen" src={image}></img>
-       <NavLink to={`/detail/${id}`}>
         <div>
-        <h2>{title}</h2>
+        <h2 className={style.cardH2}>{title}</h2>
         </div>
+       <NavLink to={`/detail/${id}`}>
+        <img alt="imagen" src={image} className={style.cardImg}></img>
        </NavLink>
        <br />
-        <h3>{diets}</h3>
+        <h3 className={style.dieth3}>Diets</h3>
+        { Array.isArray(diets) && 
+          diets.map((diet,index) => (
+            
+            <div key={index} className={style.diet}>
+                    {diet}
+                  </div>
+          ))}
+
+
       </div>
     );
   }
