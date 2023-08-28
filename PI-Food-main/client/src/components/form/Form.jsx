@@ -8,11 +8,14 @@ function Form () {
    const dispatch = useDispatch();
    
    const diets = useSelector((state) => state.diets);
+  
    useEffect(() => {
-       if(diets.length === 0){
-           dispatch(getDiets());
-           console.log(diets)
-       }
+         if(diets.length === 0 ) {
+             dispatch(getDiets());
+                console.log(diets)
+         }
+          
+       
     }, [diets,dispatch]);
     //console.log(getDiets)
     const [input, setInput] = useState({
@@ -23,7 +26,7 @@ function Form () {
         image: "",
         diets: [],
     })
-    //console.log(diets)
+   
     const [errors, setErrors] = useState({})
    
     function handleChange(event){
@@ -67,8 +70,8 @@ function Form () {
         }
     };
     //console.log(handleChangeDiets)
-    // deshabilitar el voton si no completan todos los campos:
-    const isValid = Object.values(errors).every((error) => !error)
+    
+    
 
     return (
      <div className={style.createFormContainer}>
@@ -140,7 +143,7 @@ function Form () {
             </div>
             <br />
             <div>
-                <button type="submit" disabled={!isValid} className={style.submitButton}>Create</button>
+                <button type="submit" disabled={Object.keys(errors).length > 0} className={style.submitButton}>Create</button>
             </div>
         </form>
      </div>

@@ -8,6 +8,6 @@ const getAllInfo = async () => {
     const allInfo = apiInfo.concat(dbInfo);
 
     return allInfo;
-};
+};  
 
 module.exports = {getAllInfo};

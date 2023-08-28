@@ -4,6 +4,10 @@
 
 }
 .detailContainer {
+  background-image: url("../../images/iStock-1310044335.jpg");
+ background-position: center;
+ background-size: 110%;
+  background-repeat: space;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,8 +32,8 @@
   font-size: 24px;
 }
 .imageSection {
-  margin-bottom: 10px;
-  align-self: flex-start;
+  margin-right: 20px;
+  flex: 1;
 }
 
 .recipeImage {
@@ -110,26 +114,35 @@
   }
 
   .summarySection {
-    width: 25%;
-    height: 70%;
-    margin-top: none;
-    margin-bottom: 20px;
-    margin-left: 1000px;
+    width: 2000px;
+    height: 10px;
+    margin-top: 0px;
+   
+
   }
   
   .summaryTitle {
+    font-family: "Rosalia", sans-serif;
     font-size: 18px;
+    color: rgba(255, 227, 172, 0.824);
+    background-color: rgba(207, 88, 20, 0.916);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
   }
   
   .summaryText {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 10px;
+    font-family: "Oswald", sans-serif;
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo de la caja */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
   .contentSection {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: flex-start;
+    
   }
   .stepsSection {
     width: 50%;
@@ -155,6 +168,10 @@
     list-style: none;
     padding: 0;
   }
+  @font-face {
+    font-family: "Oswald";
+    src: url("../../fonts/Oswald-VariableFont_wght.ttf");
+}
   
   .stepItem {
     font-family: "Oswald", sans-serif;
@@ -164,4 +181,38 @@
     margin-bottom: 20px;
     padding: 5px 10px;
   }
-  
+  .contentWrapper {
+    display: flex;
+    align-items: flex-start; /* Centrar verticalmente los elementos */
+    flex-wrap: wrap;
+  }
+
+  .divHealthDiet {
+    flex: 1; /* Ocupar todo el espacio disponible */
+  display: flex;
+  flex-direction: column; /* Apilar los elementos verticalmente */
+  align-items: flex-start;
+  padding-right: 10px;
+  }
+.divSummary {
+  flex: 1;
+ width: 400px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+.buttonBack {
+  font-family: "Rosalia", sans-serif;
+    background-color:rgba(207, 88, 20, 0.916);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   align-items: flex-end ;
+   margin-left: 1300px;
+}
+.buttonBack:hover {
+  background-color:rgb(110, 110, 20) ;
+}

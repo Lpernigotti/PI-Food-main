@@ -117,7 +117,7 @@ const handlerPostRecipe = async(req,res) => {
             healthScore,
             steps,
             image
-        });
+        });  
         let getDiet = await Diets.findAll({
             where:{
                 name: diets || ""

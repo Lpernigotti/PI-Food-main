@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams , NavLink} from "react-router-dom";
 import { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { recipeDetail } from "../../redux/actions";
@@ -15,62 +15,77 @@ function Detail () {
 console.log(recipe.diets)
   return (
       <div className={style.detailContainer}>
-        <div className={style.titImgSumSection}>
+        <NavLink to={`/home`} >
+            <button className={style.buttonBack}>Back</button>
+        </NavLink>
         <div className={style.titleSection}>
         <h2 className={style.title}>{recipe.title}</h2>
         </div>
-        
-            {recipe.summary? (
-              <div className={style.contentSection}>
-                 <div className={style.summarySection}>
-                  <h3 className={style.summaryTitle}>Summary: </h3>
-                  <p className={style.summaryText}>{ recipe?.summary.replace( /(<([^>]+)>)/ig, '')}</p>
-                </div>
-              </div>
-    
-              ): (
-              <div>
-                <h4>Summary is not available</h4>
-              </div>
-            )}
-            </div>
+         
+          <div className={style.contentWrapper}>
             <div className={style.imageSection}>
-              <img src={recipe.image} alt=" img Not found" className={style.recipeImage}/>
+              <img src={recipe.image} alt={recipe.title} className={style.recipeImage}/>
             </div>
 
-        {recipe.healthScore? (
-          
-          <div className={style.infoSection}>
-            <div className={style.healthScore}>
-              <div className={style.healthScoreHover}>
-                <h3 className={style.healthScoreTitle}>Health Score: </h3>
-                <h4 className={style.healthScoreValue}>{recipe?.healthScore}</h4>
-              </div>
-            </div>
+            <div className={style.divHealthDiet}>
+                      {recipe.healthScore? (
+                      <div className={style.infoSection}>
+                        <div className={style.healthScore}>
+                          <div className={style.healthScoreHover}>
+                            <h3 className={style.healthScoreTitle}>Health Score: </h3>
+                            <h4 className={style.healthScoreValue}>{recipe?.healthScore}</h4>
+                          </div>
+                        </div>
+                      </div>
 
-          </div>
-        ): (
-          <div className={style.infoSection}>
-            <div className={style.healthScore}>
-              <div className={style.healthScoreHover}>
-                <h3 className={style.healthScoreTitle}>Health Score: </h3>
-                <h4>HealthScore is not available</h4>
-              </div>
+                        ): (
+                        <div className={style.infoSection}>
+                          <div className={style.healthScore}>
+                            <div className={style.healthScoreHover}>
+                              <h3 className={style.healthScoreTitle}>Health Score: </h3>
+                              <h4>HealthScore is not available</h4>
+                            </div>
+                          </div>
+                        </div>
+                        )}
+         
+                        <div className={style.diets}>
+                          <h3 className={style.dietsTitle}>Diets: </h3>
+                          <ul className={style.dietList}>
+                              {recipe?.diets?.map((d) => (
+                              <li key={d.id} className={style.dietItem}>{d.name || d}</li>
+                              ))} 
+                              {recipe?.Diets?.map((d) => (
+                                <li key={d.id} className={style.dietItem}>{d.name || d}</li>
+                              ))}            
+                            </ul>
+                        </div>
+
             </div>
-          </div>
-        )}
-        <div className={style.diets}>
-         <h3 className={style.dietsTitle}>Diets: </h3>
-            <ul className={style.dietList}>
-            {recipe?.diets?.map((d) => (
-              <li key={d.id} className={style.dietItem}>{d.name || d}</li>
-            ))}            
-          </ul>
           
-        </div>
-            <div className={style.stepsSection}>
+
+                <div className={style.divSummary}>
+                    {recipe.summary? (
+                    <div className={style.contentSection}>
+                     <div className={style.summarySection}>
+                        <h3 className={style.summaryTitle}>Summary: </h3>
+                        <p className={style.summaryText}>{ recipe?.summary.replace( /(<([^>]+)>)/ig, '')}</p>
+                      </div>
+                 </div>
+    
+                        ): (
+                  <div>
+                    <h4>Summary is not available</h4>
+                  </div>
+                    )}
+          
+          </div>
+           
+
+          
+              <div className={style.stepsSection}>
               <h4 className={style.stepsTitle}>Steps: </h4>
-          {Array.isArray(recipe.steps)? (
+                {Array.isArray(recipe.steps)? (
               <ol className={style.stepsList}>
 
                 {recipe.steps?.map((s) => {
@@ -81,15 +96,15 @@ console.log(recipe.diets)
                   )
                 })}
               </ol>
-          ) : (
-            <div>
-             <h4>Steps: </h4>
-             <p>{recipe?.steps}</p>
-           </div>
-          )
-        }
-        </div>
-
+              ) : (
+              <div>
+                  <h4>Steps: </h4>
+                 <p>{recipe?.steps}</p>
+              </div>
+              )
+              }
+              </div>
+            </div>
         
 
       </div>

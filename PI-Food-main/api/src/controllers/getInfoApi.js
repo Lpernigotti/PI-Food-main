@@ -13,7 +13,7 @@ const getInfoApi = async () => {
     const apiData = await infoApi.map((e) => {
       return {
         id: e.id,
-        title: e.title,
+        title: e.title, 
         summary: e.summary,
         healthScore: e.healthScore,
         image: e.image,

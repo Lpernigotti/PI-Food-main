@@ -7,7 +7,7 @@ const dietsRouter = require('./dietsRouter');
 const router = Router();
 
 // Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+// Ejemplo: router.use('/auth', authRouter); 
 router.use('/recipes', recipesRouter);
 router.use('/diets', dietsRouter);
 
