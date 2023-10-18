@@ -2,20 +2,20 @@
 .cardContainer{
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 233, 188, 0.824);
-  border: 3px solid rgba(207, 88, 20, 0.916); 
+  background-color: rgba(255, 233, 188, 0.895);
+  border: 1px solid rgba(207, 88, 20, 0.916); 
   border-radius: 5px;
   padding: 25px ;
   margin: 10px;
   cursor: pointer;
   backface-visibility: hidden;
   transform: translateZ(0);
-  box-sizing: border-box;
+  box-sizing:content-box;
 
 }
 
 .cardImg {
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
@@ -27,18 +27,18 @@
   src: url("../../fonts/Rosalia.otf");
 }
 .cardH2 {
-  font-family: "Rosalia", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
   margin-top: 10px;
-  color: #8b5f30;
+  color: rgba(207, 88, 20, 0.916);
   text-decoration: none;
   outline: none;
   backface-visibility: hidden; /* Quitar el subrayado del enlace */
 }
 .dietList {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   gap: 10px; /* Espacio entre las dietas */
+  float: left;
 }
 @font-face {
   font-family: "Oswald";
@@ -48,15 +48,16 @@
 .diet {
   font-family: "Oswald", sans-serif;
   font-size: 15px;
-  background-color: rgba(6, 76, 6, 0.82);
-  color: rgb(255, 233, 188);
+  color: rgba(207, 88, 20, 0.916);
   padding: 3px 6px;
-  border-radius: 4px;
+  text-align: left;
+  
 }
 .dieth3 {
-  font-family: "Rosalia", sans-serif;
-  color: #8b5f30 ;
-  font-size: 20px;
-  align-self: center;
+  font-family: "Oswald", sans-serif;
+  color: rgba(207, 88, 20, 0.916) ;
+  font-style: italic;
+  font-size: 30px;
+  text-align: left;
   margin-top: 1px;
 }

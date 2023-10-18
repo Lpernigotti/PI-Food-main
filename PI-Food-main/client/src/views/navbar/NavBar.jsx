@@ -8,8 +8,6 @@ function NavBar () {
             <div>
                 <h3 className={style.slogan}>You don't need to eat less, you need to eat well</h3>
             </div>
-        
-            
             <div className={style.divNL}>
             <button className={style.navButton}>
                 <NavLink to={'/home'} className={style.navLink}>Home</NavLink>

@@ -3,11 +3,13 @@
     src: url("../../fonts//Rosalia.otf");
 }
 .navBar {
-    background-color: rgba(207, 88, 20, 0.916);
+    background-color: rgba(207, 89, 20, 0.881);
+    background-size: contain;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 40px;
+    padding: 10px;
+    
   }
 
   .navLink {
